@@ -1,0 +1,1 @@
+## move in the directory and run `npm install` then `gulp watch` 
