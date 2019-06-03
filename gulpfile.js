@@ -11,12 +11,6 @@ function style(){
         .pipe(browserSync.stream());
 }
 
-// function script(){
-//     return gulp.src('./js/**/*.js')
-//         .pipe(gulp.dest('./assets/js/'))
-//         .pipe(browserSync.stream());
-// }
-
 function watch(){
     browserSync.init({
         server: {
@@ -24,11 +18,9 @@ function watch(){
         }
     });
     gulp.watch('./scss/**/*.scss', style);
-    // gulp.watch('./js/**/*.js', script);
     gulp.watch('./*.html').on('change', browserSync.reload);
 
 }
 
 exports.style = style;
-// exports.script = script;
 exports.watch = watch;
